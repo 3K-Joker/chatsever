@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="homework2.ReceiveThried" x="338" y="119">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="homework2.Userlist"
+            endpointName="userlist" kind="Simple">
+            <Point x="773" y="402"/>
+        </Association>
+        <Association destinationClassName="homework2.Node"
+            endpointName="clientNode" kind="Simple"/>
+        <Communication destinationClassName="homework2.Userlist"/>
+    </Class>
+    <Class name="homework2.Server_Setting" x="1030" y="165">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="homework2.ListenThried" x="233" y="452">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="homework2.Userlist"
+            endpointName="userlist" kind="Simple"/>
+        <Association destinationClassName="homework2.ReceiveThried"
+            endpointName="receiveThried" kind="Simple"/>
+        <Association destinationClassName="homework2.Node"
+            endpointName="clientNode" kind="Simple"/>
+        <Communication destinationClassName="homework2.Userlist"/>
+    </Class>
+    <Class name="homework2.Window" x="695" y="7">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="homework2.Userlist"
+            endpointName="userlist" kind="Simple">
+            <Point x="1025" y="337"/>
+        </Association>
+        <Association destinationClassName="homework2.ListenThried"
+            endpointName="listenThried" kind="Simple"/>
+        <Communication destinationClassName="homework2.Server_Setting"/>
+        <Communication destinationClassName="homework2.Userlist"/>
+    </Class>
+    <Class name="homework2.Node" x="634" y="583">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="homework2.Node"
+            endpointName="nextNode" kind="Simple"/>
+    </Class>
+    <Class name="homework2.Userlist" x="1236" y="410">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="homework2.Node"
+            endpointName="rootNode" kind="Simple">
+            <Point x="1317" y="534"/>
+            <Point x="1007" y="678"/>
+        </Association>
+        <Association destinationClassName="homework2.Node"
+            endpointName="pointerNode" kind="Simple"/>
+    </Class>
+</ClassDiagram>
